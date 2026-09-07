@@ -1,0 +1,52 @@
+---
+import { Image } from 'astro:assets';
+import proofImage from '../assets/proof-pagespeed.png';
+import { pagespeed } from '../data/pagespeed';
+
+interface Props {
+  eyebrow: string;
+  heading: string;
+  captionPrefix: string;
+  captionSuffix: string;
+  imageAlt: string;
+}
+
+const { eyebrow, heading, captionPrefix, captionSuffix, imageAlt } = Astro.props;
+
+const metrics = [
+  { label: 'Performance', value: pagespeed.performance },
+  { label: 'LCP', value: `${pagespeed.lcp}s` },
+  { label: 'INP', value: `${pagespeed.inp}ms` },
+  { label: 'CLS', value: pagespeed.cls },
+];
+---
+
+<section class="border-t border-border">
+  <div class="mx-auto max-w-4xl px-6 py-12 sm:py-24">
+    <div class="rounded-2xl border border-border bg-bg-card p-8 sm:p-10" data-reveal>
+      <p class="text-xs font-medium uppercase tracking-widest text-accent">{eyebrow}</p>
+      <h2 class="mt-3 text-balance text-2xl font-semibold tracking-tight text-ink sm:text-3xl">{heading}</h2>
+
+      <Image
+        src={proofImage}
+        alt={imageAlt}
+        width={1600}
+        height={721}
+        class="mt-8 w-full rounded-xl border border-border"
+      />
+
+      <dl class="mt-8 grid grid-cols-2 gap-6 sm:grid-cols-4">
+        {metrics.map((metric) => (
+          <div>
+            <dt class="text-xs font-medium uppercase tracking-wider text-ink-faint">{metric.label}</dt>
+            <dd class="mt-1 text-2xl font-semibold text-accent">{metric.value}</dd>
+          </div>
+        ))}
+      </dl>
+
+      <p class="mt-8 text-sm leading-relaxed text-ink-muted">
+        {captionPrefix} LCP {pagespeed.lcp}s, {captionSuffix}
+      </p>
+    </div>
+  </div>
+</section>

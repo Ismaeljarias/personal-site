@@ -1,7 +1,9 @@
 ---
+import { getCollection } from 'astro:content';
 import { t, localePath, type Locale } from '../i18n/content';
 import { siteConfig } from '../site.config';
 import ServiceCard from '../components/ServiceCard.astro';
+import CaseStudyPreview from '../components/CaseStudyPreview.astro';
 import CTABanner from '../components/CTABanner.astro';
 
 interface Props {
@@ -10,6 +12,12 @@ interface Props {
 
 const { lang } = Astro.props;
 const copy = t(lang).home;
+const workCopy = t(lang).work;
+
+const caseStudies = (await getCollection('work', (entry) => entry.id.startsWith(`${lang}/`))).sort(
+  (a, b) => a.data.order - b.data.order,
+);
+const shopifyAppHref = localePath(lang, '/work/shopify-app');
 ---
 
 <section class="mx-auto max-w-5xl px-6 pb-20 pt-12 sm:pt-32">
@@ -20,7 +28,10 @@ const copy = t(lang).home;
     {copy.h1}
   </h1>
   <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-muted" data-reveal data-reveal-delay={0.16}>
-    {copy.sub}
+    {copy.sub}{' '}
+    <a href={shopifyAppHref} class="text-accent underline decoration-accent/40 underline-offset-4 hover:opacity-80">
+      {copy.appNote}
+    </a>
   </p>
 
   <div class="mt-9 flex flex-wrap gap-4" data-reveal data-reveal-delay={0.24}>
@@ -95,6 +106,21 @@ const copy = t(lang).home;
       <a href={localePath(lang, '/work')} class="text-sm font-medium text-accent hover:opacity-80" data-reveal>
         {copy.workCta} →
       </a>
+    </div>
+
+    <div class="mt-10 grid gap-6 lg:grid-cols-3">
+      {caseStudies.map((entry, i) => (
+        <CaseStudyPreview
+          title={entry.data.title}
+          client={entry.data.client}
+          role={entry.data.role}
+          summary={entry.data.summary}
+          stack={entry.data.stack}
+          href={localePath(lang, `/work/${entry.id.split('/')[1]}`)}
+          cta={workCopy.cardCta}
+          delay={i * 0.08}
+        />
+      ))}
     </div>
   </div>
 </section>

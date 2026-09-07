@@ -1,0 +1,50 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import WorkDetailView from '../../../views/WorkDetailView.astro';
+import { t } from '../../../i18n/content';
+import { siteConfig } from '../../../site.config';
+import fallbackOgImage from '../../../assets/og/work-es.png';
+
+const lang = 'es' as const;
+const meta = t(lang).meta;
+
+const ogImages = import.meta.glob<{ default: ImageMetadata }>('../../../assets/og/work-*-es.png', { eager: true });
+
+export async function getStaticPaths() {
+  const entries = await getCollection('work', (entry) => entry.id.startsWith('es/'));
+  return entries.map((entry) => ({
+    params: { slug: entry.id.split('/')[1] },
+    props: { entry },
+  }));
+}
+
+interface Props {
+  entry: CollectionEntry<'work'>;
+}
+
+const { entry } = Astro.props;
+const slug = entry.id.split('/')[1];
+const ogImage = ogImages[`../../../assets/og/work-${slug}-es.png`]?.default ?? fallbackOgImage;
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: entry.data.title,
+  description: entry.data.summary,
+  author: {
+    '@type': 'Person',
+    name: siteConfig.name,
+  },
+};
+---
+
+<BaseLayout
+  lang={lang}
+  title={`${entry.data.title} — ${meta.titleSuffix}`}
+  description={entry.data.summary}
+  image={ogImage}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} slot="head" is:inline />
+  <WorkDetailView lang={lang} entry={entry} />
+</BaseLayout>

@@ -41,9 +41,10 @@ const en = {
     rights: `© ${new Date().getFullYear()} Ismael Arias. All rights reserved.`,
   },
   home: {
-    eyebrow: 'Senior Shopify Developer · Ex-Amazon · Mexico City',
+    eyebrow: 'Senior Shopify Developer · Ex-Amazon · Shopify App Store Developer',
     h1: 'Shopify and WordPress sites that load fast, convert, and don’t break at scale.',
     sub: 'I design, build, and fix Shopify Plus / Hydrogen storefronts and fast WordPress sites for teams tired of guessing why performance and conversion stall. 10+ years shipping production frontend, most recently as a Frontend Engineer II at Amazon.',
+    appNote: 'I also design and ship my own Shopify app, live on the Shopify App Store.',
     ctaPrimary: 'Book a call',
     ctaSecondary: 'See the Performance Audit',
     servicesEyebrow: 'What I do',
@@ -131,6 +132,13 @@ const en = {
           'Custom Liquid themes built for speed and maintainability from day one, not retrofitted after launch.',
       },
     ],
+    proof: {
+      eyebrow: 'Proof, not a pitch',
+      heading: 'This site passes its own audit.',
+      captionPrefix: 'This site:',
+      captionSuffix: 'Core Web Vitals passing. Same discipline I apply to Shopify stores.',
+      imageAlt: 'PageSpeed Insights reports for ismaeljarias.com, mobile and desktop, showing 100 performance scores and passing Core Web Vitals',
+    },
     audit: {
       eyebrow: 'Not sure where to start?',
       heading: 'Get a Performance Audit.',
@@ -152,6 +160,8 @@ const en = {
     eyebrow: 'Line B · WordPress & Dynamic Sites',
     h1: 'Custom WordPress builds that do more than a blog.',
     sub: 'I build booking systems, directories, and B2B catalogs on WordPress — production-ready in 1–3 weeks, with custom PHP wherever the plugin ecosystem runs out.',
+    metaDescription:
+      'Custom WordPress development — booking systems, directories, and B2B catalogs built and launched in 1–3 weeks, with custom PHP wherever the plugin ecosystem runs out.',
     ctaPrimary: 'Book a call',
     servicesHeading: 'What I build',
     services: [
@@ -190,43 +200,8 @@ const en = {
   work: {
     eyebrow: 'Selected work',
     h1: 'A few problems I’ve actually solved.',
-    sub: 'Real engineering work from my time at Amazon, Kritik, and Viafoura — described plainly: the problem, what I did, and what changed.',
-    labels: { problem: 'Problem', action: 'Action', result: 'Result' },
-    caseStudies: [
-      {
-        company: 'Amazon',
-        role: 'Frontend Engineer II',
-        title: 'Video performance under hard platform constraints',
-        problem:
-          'TV app experiences run under strict rendering, memory, and input constraints — most standard web performance playbooks don’t apply, and navigation/focus handling has to be built from scratch for remote-control input.',
-        action:
-          'Built reusable focus/navigation systems, reference apps, and internal tooling adopted across multiple teams; worked directly on video playback architecture and rendering limits; modernized telemetry clients across TypeScript, Go, and Python to align behavior across the whole ecosystem.',
-        result:
-          'Tooling and components adopted by internal and external (3P) teams, unblocking work that previously required rebuilding the same systems per team, and raising the baseline for TV experience quality across the organization.',
-      },
-      {
-        company: 'Kritik',
-        role: 'Full Stack Developer',
-        title: 'Untangling a tightly-coupled React/Redux codebase',
-        problem:
-          'The data layer and frontend state had grown tightly coupled — React and Redux components duplicating logic, hard to test safely, and slow to change without breaking something else.',
-        action:
-          'Integrated PostgreSQL with Prisma in TypeScript, migrated state management from Redux to React Query, broke components down for reuse, and added Cypress end-to-end test coverage.',
-        result:
-          'A data layer and component architecture the team could extend without breaking existing features, with automated tests catching regressions before they reached production.',
-      },
-      {
-        company: 'Viafoura',
-        role: 'Frontend Developer',
-        title: 'Moving from Vue/Nuxt to Next.js without disrupting live clients',
-        problem:
-          'Client-facing apps ran on Vue.js and Nuxt SSR; parts of the stack needed to move to Next.js for better SSR/SSG performance and SEO — without breaking functionality clients depended on daily.',
-        action:
-          'Architected and refined the existing Vue/Nuxt applications, resolved complex cross-framework bugs, and led the transition of key surfaces to Next.js.',
-        result:
-          'SEO-friendly, high-performance client experiences carried over cleanly to the new stack, with no loss of functionality during the transition.',
-      },
-    ],
+    sub: 'Real engineering work from my time at Amazon and Kritik, plus a Shopify app I designed and shipped solo — described plainly: the problem, what I did, and what changed.',
+    cardCta: 'Read the case study',
     finalHeading: 'Want engineering like this on your store or site?',
     finalCta: 'Book a call',
   },
@@ -263,9 +238,10 @@ const es = {
     rights: `© ${new Date().getFullYear()} Ismael Arias. Todos los derechos reservados.`,
   },
   home: {
-    eyebrow: 'Senior Shopify Developer · Ex-Amazon · Ciudad de México',
+    eyebrow: 'Senior Shopify Developer · Ex-Amazon · Shopify App Store Developer',
     h1: 'Tiendas Shopify y sitios WordPress que cargan rápido, convierten y no se rompen al crecer.',
     sub: 'Diseño, construyo y arreglo tiendas Shopify Plus / Hydrogen y sitios WordPress rápidos para equipos cansados de adivinar por qué el rendimiento y la conversión no avanzan. 10+ años construyendo frontend en producción, más recientemente como Frontend Engineer II en Amazon.',
+    appNote: 'También diseño y publico mi propia app de Shopify, disponible en el Shopify App Store.',
     ctaPrimary: 'Agenda una llamada',
     ctaSecondary: 'Ver el Performance Audit',
     servicesEyebrow: 'Qué hago',
@@ -353,6 +329,13 @@ const es = {
           'Temas Liquid construidos para velocidad y mantenibilidad desde el primer día, no ajustados después del lanzamiento.',
       },
     ],
+    proof: {
+      eyebrow: 'Prueba, no promesa',
+      heading: 'Este sitio pasa su propio audit.',
+      captionPrefix: 'Este sitio:',
+      captionSuffix: 'Core Web Vitals aprobados. La misma disciplina que aplico a tiendas Shopify.',
+      imageAlt: 'Reportes de PageSpeed Insights de ismaeljarias.com, móvil y escritorio, mostrando 100 en performance y Core Web Vitals aprobados',
+    },
     audit: {
       eyebrow: '¿No sabes por dónde empezar?',
       heading: 'Solicita un Performance Audit.',
@@ -374,6 +357,8 @@ const es = {
     eyebrow: 'Línea B · WordPress & Sitios Dinámicos',
     h1: 'Sitios WordPress a medida que hacen mucho más que un blog.',
     sub: 'Construyo sistemas de reservas, directorios y catálogos B2B en WordPress — listos para producción en 1 a 3 semanas, con PHP a medida cuando el ecosistema de plugins no alcanza.',
+    metaDescription:
+      'Desarrollo WordPress a medida — sistemas de reservas, directorios y catálogos B2B construidos y lanzados en 1 a 3 semanas, con PHP a medida cuando el ecosistema de plugins no alcanza.',
     ctaPrimary: 'Agenda una llamada',
     servicesHeading: 'Qué construyo',
     services: [
@@ -412,43 +397,8 @@ const es = {
   work: {
     eyebrow: 'Trabajo seleccionado',
     h1: 'Algunos problemas que ya resolví.',
-    sub: 'Trabajo de ingeniería real de mi paso por Amazon, Kritik y Viafoura — descrito en términos simples: el problema, qué hice, y qué cambió.',
-    labels: { problem: 'Problema', action: 'Acción', result: 'Resultado' },
-    caseStudies: [
-      {
-        company: 'Amazon',
-        role: 'Frontend Engineer II',
-        title: 'Rendimiento de video bajo restricciones de plataforma extremas',
-        problem:
-          'Las experiencias de apps de TV corren bajo restricciones estrictas de renderizado, memoria y entrada — la mayoría de los playbooks estándar de performance web no aplican, y el manejo de navegación/foco tiene que construirse desde cero para control remoto.',
-        action:
-          'Construí sistemas reutilizables de foco/navegación, apps de referencia, y herramientas internas adoptadas por múltiples equipos; trabajé directamente en arquitectura de reproducción de video y límites de renderizado; modernicé clientes de telemetría en TypeScript, Go y Python para alinear el comportamiento en todo el ecosistema.',
-        result:
-          'Herramientas y componentes adoptados por equipos internos y externos (3P), destrabando trabajo que antes requería reconstruir los mismos sistemas por equipo, y elevando el estándar de calidad de experiencias de TV en toda la organización.',
-      },
-      {
-        company: 'Kritik',
-        role: 'Full Stack Developer',
-        title: 'Desenredando un codebase de React/Redux fuertemente acoplado',
-        problem:
-          'La capa de datos y el estado del frontend se habían vuelto fuertemente acoplados — componentes de React y Redux duplicando lógica, difíciles de probar con seguridad, y lentos de cambiar sin romper algo más.',
-        action:
-          'Integré PostgreSQL con Prisma en TypeScript, migré el manejo de estado de Redux a React Query, dividí componentes para reutilización, y agregué cobertura de pruebas end-to-end con Cypress.',
-        result:
-          'Una capa de datos y arquitectura de componentes que el equipo pudo extender sin romper funcionalidad existente, con pruebas automatizadas detectando regresiones antes de llegar a producción.',
-      },
-      {
-        company: 'Viafoura',
-        role: 'Frontend Developer',
-        title: 'Migrando de Vue/Nuxt a Next.js sin afectar clientes en vivo',
-        problem:
-          'Las apps de cara al cliente corrían sobre Vue.js y Nuxt SSR; partes del stack necesitaban migrar a Next.js para mejor rendimiento SSR/SSG y SEO — sin romper funcionalidad de la que los clientes dependían a diario.',
-        action:
-          'Arquitecté y refiné las aplicaciones existentes de Vue/Nuxt, resolví bugs complejos entre frameworks, y lideré la transición de las superficies clave hacia Next.js.',
-        result:
-          'Experiencias de cliente rápidas y amigables con SEO que pasaron limpiamente al nuevo stack, sin pérdida de funcionalidad durante la transición.',
-      },
-    ],
+    sub: 'Trabajo de ingeniería real de mi paso por Amazon y Kritik, más una app de Shopify que diseñé y publiqué en solitario — descrito en términos simples: el problema, qué hice, y qué cambió.',
+    cardCta: 'Ver el caso completo',
     finalHeading: '¿Quieres ingeniería así en tu tienda o sitio?',
     finalCta: 'Agenda una llamada',
   },

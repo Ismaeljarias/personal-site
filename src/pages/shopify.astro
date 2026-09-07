@@ -2,11 +2,12 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ShopifyView from '../views/ShopifyView.astro';
 import { t } from '../i18n/content';
+import ogImage from '../assets/og/shopify-en.png';
 
 const lang = 'en' as const;
 const meta = t(lang).meta;
 ---
 
-<BaseLayout lang={lang} title={`Shopify Plus & Hydrogen Development — ${meta.titleSuffix}`} description={meta.description}>
+<BaseLayout lang={lang} title={`Shopify Plus & Hydrogen Development — ${meta.titleSuffix}`} description={meta.description} image={ogImage}>
   <ShopifyView lang={lang} />
 </BaseLayout>

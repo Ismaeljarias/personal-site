@@ -1,6 +1,7 @@
 ---
-import { t, type Locale } from '../i18n/content';
-import CaseStudyCard from '../components/CaseStudyCard.astro';
+import { getCollection } from 'astro:content';
+import { t, localePath, type Locale } from '../i18n/content';
+import CaseStudyPreview from '../components/CaseStudyPreview.astro';
 import CTABanner from '../components/CTABanner.astro';
 
 interface Props {
@@ -9,6 +10,10 @@ interface Props {
 
 const { lang } = Astro.props;
 const copy = t(lang).work;
+
+const caseStudies = (await getCollection('work', (entry) => entry.id.startsWith(`${lang}/`))).sort(
+  (a, b) => a.data.order - b.data.order,
+);
 ---
 
 <section class="mx-auto max-w-5xl px-6 pb-16 pt-12 sm:pt-32">
@@ -24,15 +29,15 @@ const copy = t(lang).work;
 <section class="border-t border-border">
   <div class="mx-auto max-w-6xl px-6 py-16">
     <div class="grid gap-6 lg:grid-cols-3">
-      {copy.caseStudies.map((cs, i) => (
-        <CaseStudyCard
-          company={cs.company}
-          role={cs.role}
-          title={cs.title}
-          problem={cs.problem}
-          action={cs.action}
-          result={cs.result}
-          labels={copy.labels}
+      {caseStudies.map((entry, i) => (
+        <CaseStudyPreview
+          title={entry.data.title}
+          client={entry.data.client}
+          role={entry.data.role}
+          summary={entry.data.summary}
+          stack={entry.data.stack}
+          href={localePath(lang, `/work/${entry.id.split('/')[1]}`)}
+          cta={copy.cardCta}
           delay={i * 0.08}
         />
       ))}

@@ -4,6 +4,7 @@ import { siteConfig } from '../site.config';
 import ServiceCard from '../components/ServiceCard.astro';
 import ProcessSteps from '../components/ProcessSteps.astro';
 import CTABanner from '../components/CTABanner.astro';
+import PerformanceProof from '../components/PerformanceProof.astro';
 
 interface Props {
   lang: Locale;
@@ -64,6 +65,14 @@ const copy = t(lang).shopify;
     </div>
   </div>
 </section>
+
+<PerformanceProof
+  eyebrow={copy.proof.eyebrow}
+  heading={copy.proof.heading}
+  captionPrefix={copy.proof.captionPrefix}
+  captionSuffix={copy.proof.captionSuffix}
+  imageAlt={copy.proof.imageAlt}
+/>
 
 <section id="audit" class="scroll-mt-24 border-t border-border">
   <div class="mx-auto max-w-4xl px-6 py-12 sm:py-24">

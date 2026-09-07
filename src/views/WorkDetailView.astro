@@ -1,0 +1,56 @@
+---
+import { render, type CollectionEntry } from 'astro:content';
+import { t, localePath, type Locale } from '../i18n/content';
+import CTABanner from '../components/CTABanner.astro';
+
+interface Props {
+  lang: Locale;
+  entry: CollectionEntry<'work'>;
+}
+
+const { lang, entry } = Astro.props;
+const copy = t(lang).work;
+const { Content } = await render(entry);
+const { title, client, role, period, stack, metric } = entry.data;
+---
+
+<section class="mx-auto max-w-3xl px-6 pb-8 pt-12 sm:pt-32">
+  <a
+    href={localePath(lang, '/work')}
+    class="text-sm font-medium text-accent hover:opacity-80"
+    data-reveal
+  >
+    ← {copy.eyebrow}
+  </a>
+
+  <p class="mt-6 text-xs font-medium uppercase tracking-widest text-accent" data-reveal data-reveal-delay={0.05}>
+    {client} — {role} · {period}
+  </p>
+  <h1 class="mt-4 text-balance text-3xl font-semibold tracking-tight text-ink sm:text-4xl" data-reveal data-reveal-delay={0.1}>
+    {title}
+  </h1>
+
+  <ul class="mt-6 flex flex-wrap gap-2" data-reveal data-reveal-delay={0.15}>
+    {stack.map((item) => (
+      <li class="rounded-full border border-border px-2.5 py-1 text-xs text-ink-faint">{item}</li>
+    ))}
+  </ul>
+</section>
+
+{metric && (
+  <section class="mx-auto max-w-3xl px-6 pb-4">
+    <div class="rounded-2xl border border-accent/30 bg-bg-card p-8 text-center" data-reveal>
+      <p class="text-2xl font-semibold text-accent sm:text-3xl">{metric}</p>
+    </div>
+  </section>
+)}
+
+<section class="border-t border-border">
+  <div class="mx-auto max-w-3xl px-6 py-14">
+    <div class="case-prose mx-auto max-w-[68ch]" data-reveal>
+      <Content />
+    </div>
+  </div>
+</section>
+
+<CTABanner heading={copy.finalHeading} cta={copy.finalCta} />

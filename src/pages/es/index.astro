@@ -2,11 +2,28 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import HomeView from '../../views/HomeView.astro';
 import { t } from '../../i18n/content';
+import { siteConfig } from '../../site.config';
+import ogImage from '../../assets/og/home-es.png';
 
 const lang = 'es' as const;
 const meta = t(lang).meta;
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: siteConfig.name,
+  jobTitle: 'Senior Shopify Developer',
+  url: `https://${siteConfig.domain}`,
+  sameAs: [siteConfig.linkedin, siteConfig.github],
+};
 ---
 
-<BaseLayout lang={lang} title={`Ismael Arias — Senior Shopify Developer y WordPress`} description={meta.description}>
+<BaseLayout
+  lang={lang}
+  title="Ismael Arias — Senior Shopify Developer | Hydrogen y Rendimiento"
+  description={meta.description}
+  image={ogImage}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(personSchema)} slot="head" is:inline />
   <HomeView lang={lang} />
 </BaseLayout>

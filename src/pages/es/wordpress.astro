@@ -2,11 +2,12 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import WordPressView from '../../views/WordPressView.astro';
 import { t } from '../../i18n/content';
+import ogImage from '../../assets/og/wordpress-es.png';
 
 const lang = 'es' as const;
-const meta = t(lang).meta;
+const copy = t(lang);
 ---
 
-<BaseLayout lang={lang} title={`WordPress & Sitios Dinámicos — ${meta.titleSuffix}`} description={meta.description}>
+<BaseLayout lang={lang} title={`WordPress & Sitios Dinámicos — ${copy.meta.titleSuffix}`} description={copy.wordpress.metaDescription} image={ogImage}>
   <WordPressView lang={lang} />
 </BaseLayout>
