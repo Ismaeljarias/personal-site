@@ -3,8 +3,11 @@ export type Locale = 'en' | 'es';
 export const locales: Locale[] = ['en', 'es'];
 
 export function localePath(locale: Locale, path: string): string {
-  const clean = path === '/' ? '' : path;
-  return locale === 'en' ? `/${clean}`.replace(/\/+/g, '/') : `/es/${clean}`.replace(/\/+/g, '/');
+  const clean = path.replace(/^\/+|\/+$/g, '');
+  if (locale === 'en') {
+    return clean === '' ? '/' : `/${clean}`;
+  }
+  return clean === '' ? '/es' : `/es/${clean}`;
 }
 
 export function altLocale(locale: Locale): Locale {
@@ -12,7 +15,7 @@ export function altLocale(locale: Locale): Locale {
 }
 
 export function switchLocalePath(pathname: string, target: Locale): string {
-  const stripped = pathname.replace(/^\/es(\/|$)/, '/');
+  const stripped = pathname.replace(/^\/es(?=\/|$)/, '') || '/';
   return localePath(target, stripped);
 }
 
