@@ -1,0 +1,55 @@
+---
+import { t, type Locale } from '../i18n/content';
+import { siteConfig } from '../site.config';
+import ServiceCard from '../components/ServiceCard.astro';
+import ProcessSteps from '../components/ProcessSteps.astro';
+import CTABanner from '../components/CTABanner.astro';
+
+interface Props {
+  lang: Locale;
+}
+
+const { lang } = Astro.props;
+const copy = t(lang).wordpress;
+---
+
+<section class="mx-auto max-w-5xl px-6 pb-16 pt-24 sm:pt-32">
+  <p class="text-sm font-medium uppercase tracking-widest text-accent" data-reveal>{copy.eyebrow}</p>
+  <h1 class="mt-5 max-w-3xl text-balance text-4xl font-semibold tracking-tight text-ink sm:text-5xl" data-reveal data-reveal-delay={0.08}>
+    {copy.h1}
+  </h1>
+  <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-muted" data-reveal data-reveal-delay={0.16}>
+    {copy.sub}
+  </p>
+  <a
+    href={siteConfig.calendlyUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="mt-9 inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-medium text-bg transition-opacity hover:opacity-90"
+    data-reveal
+    data-reveal-delay={0.24}
+  >
+    {copy.ctaPrimary}
+  </a>
+</section>
+
+<section class="border-t border-border">
+  <div class="mx-auto max-w-6xl px-6 py-24">
+    <h2 class="text-2xl font-semibold tracking-tight text-ink sm:text-3xl" data-reveal>{copy.servicesHeading}</h2>
+    <div class="mt-10 grid gap-6 sm:grid-cols-2">
+      {copy.services.map((service, i) => (
+        <ServiceCard title={service.title} description={service.description} delay={i * 0.08} />
+      ))}
+    </div>
+  </div>
+</section>
+
+<ProcessSteps heading={copy.processHeading} steps={copy.process} />
+
+<section class="border-t border-border">
+  <div class="mx-auto max-w-3xl px-6 py-16">
+    <p class="text-sm leading-relaxed text-ink-faint" data-reveal>{copy.licenseNote}</p>
+  </div>
+</section>
+
+<CTABanner heading={copy.finalHeading} cta={copy.finalCta} />

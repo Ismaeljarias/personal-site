@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContactView from '../views/ContactView.astro';
+import { t } from '../i18n/content';
+
+const lang = 'en' as const;
+const meta = t(lang).meta;
+---
+
+<BaseLayout lang={lang} title={`Contact — ${meta.titleSuffix}`} description={meta.description}>
+  <ContactView lang={lang} />
+</BaseLayout>

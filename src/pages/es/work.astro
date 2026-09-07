@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import WorkView from '../../views/WorkView.astro';
+import { t } from '../../i18n/content';
+
+const lang = 'es' as const;
+const meta = t(lang).meta;
+---
+
+<BaseLayout lang={lang} title={`Casos de Éxito — ${meta.titleSuffix}`} description={meta.description}>
+  <WorkView lang={lang} />
+</BaseLayout>

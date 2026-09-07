@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ShopifyView from '../../views/ShopifyView.astro';
+import { t } from '../../i18n/content';
+
+const lang = 'es' as const;
+const meta = t(lang).meta;
+---
+
+<BaseLayout lang={lang} title={`Desarrollo Shopify Plus & Hydrogen — ${meta.titleSuffix}`} description={meta.description}>
+  <ShopifyView lang={lang} />
+</BaseLayout>

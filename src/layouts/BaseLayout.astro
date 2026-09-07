@@ -1,0 +1,62 @@
+---
+import '@fontsource-variable/inter';
+import '../styles/global.css';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import { locales, switchLocalePath, type Locale } from '../i18n/content';
+import { siteConfig } from '../site.config';
+
+interface Props {
+  lang: Locale;
+  title: string;
+  description: string;
+}
+
+const { lang, title, description } = Astro.props;
+const path = new URL(Astro.request.url).pathname;
+const canonicalUrl = new URL(path, Astro.site);
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+
+    {locales.map((locale) => (
+      <link
+        rel="alternate"
+        hreflang={locale}
+        href={new URL(switchLocalePath(path, locale), Astro.site).toString()}
+      />
+    ))}
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href={new URL(switchLocalePath(path, 'en'), Astro.site).toString()}
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={siteConfig.name} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta name="twitter:card" content="summary" />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta name="theme-color" content="#08090b" />
+  </head>
+  <body class="min-h-screen bg-bg text-ink antialiased">
+    <Nav lang={lang} path={path} />
+    <main>
+      <slot />
+    </main>
+    <Footer lang={lang} />
+    <script>
+      import '../scripts/reveal';
+    </script>
+  </body>
+</html>

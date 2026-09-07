@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import WordPressView from '../../views/WordPressView.astro';
+import { t } from '../../i18n/content';
+
+const lang = 'es' as const;
+const meta = t(lang).meta;
+---
+
+<BaseLayout lang={lang} title={`WordPress & Sitios Dinámicos — ${meta.titleSuffix}`} description={meta.description}>
+  <WordPressView lang={lang} />
+</BaseLayout>

@@ -1,0 +1,49 @@
+---
+import { t, type Locale } from '../i18n/content';
+import { siteConfig } from '../site.config';
+
+interface Props {
+  lang: Locale;
+}
+
+const { lang } = Astro.props;
+const copy = t(lang).contact;
+---
+
+<section class="mx-auto max-w-3xl px-6 pb-24 pt-24 text-center sm:pt-32">
+  <p class="text-sm font-medium uppercase tracking-widest text-accent" data-reveal>{copy.eyebrow}</p>
+  <h1 class="mt-5 text-balance text-4xl font-semibold tracking-tight text-ink sm:text-5xl" data-reveal data-reveal-delay={0.08}>
+    {copy.h1}
+  </h1>
+  <p class="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-ink-muted" data-reveal data-reveal-delay={0.16}>
+    {copy.sub}
+  </p>
+
+  <a
+    href={siteConfig.calendlyUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="mt-9 inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-medium text-bg transition-opacity hover:opacity-90"
+    data-reveal
+    data-reveal-delay={0.24}
+  >
+    {copy.ctaPrimary}
+  </a>
+
+  <div class="mt-12 border-t border-border pt-10" data-reveal>
+    <p class="text-sm text-ink-muted">{copy.emailLabel}</p>
+    <a href={`mailto:${siteConfig.email}`} class="mt-1 inline-block font-medium text-ink hover:text-accent">
+      {siteConfig.email}
+    </a>
+  </div>
+
+  <div class="mt-8" data-reveal>
+    <p class="text-sm font-medium text-ink">{copy.socialsHeading}</p>
+    <div class="mt-3 flex justify-center gap-6 text-sm text-ink-muted">
+      <a href={siteConfig.linkedin} target="_blank" rel="noopener noreferrer" class="hover:text-ink">LinkedIn</a>
+      <a href={siteConfig.github} target="_blank" rel="noopener noreferrer" class="hover:text-ink">GitHub</a>
+    </div>
+  </div>
+
+  <p class="mt-10 text-sm text-ink-faint" data-reveal>{copy.locationNote}</p>
+</section>

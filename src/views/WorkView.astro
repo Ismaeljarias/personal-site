@@ -1,0 +1,43 @@
+---
+import { t, type Locale } from '../i18n/content';
+import CaseStudyCard from '../components/CaseStudyCard.astro';
+import CTABanner from '../components/CTABanner.astro';
+
+interface Props {
+  lang: Locale;
+}
+
+const { lang } = Astro.props;
+const copy = t(lang).work;
+---
+
+<section class="mx-auto max-w-5xl px-6 pb-16 pt-24 sm:pt-32">
+  <p class="text-sm font-medium uppercase tracking-widest text-accent" data-reveal>{copy.eyebrow}</p>
+  <h1 class="mt-5 max-w-3xl text-balance text-4xl font-semibold tracking-tight text-ink sm:text-5xl" data-reveal data-reveal-delay={0.08}>
+    {copy.h1}
+  </h1>
+  <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-muted" data-reveal data-reveal-delay={0.16}>
+    {copy.sub}
+  </p>
+</section>
+
+<section class="border-t border-border">
+  <div class="mx-auto max-w-6xl px-6 py-16">
+    <div class="grid gap-6 lg:grid-cols-3">
+      {copy.caseStudies.map((cs, i) => (
+        <CaseStudyCard
+          company={cs.company}
+          role={cs.role}
+          title={cs.title}
+          problem={cs.problem}
+          action={cs.action}
+          result={cs.result}
+          labels={copy.labels}
+          delay={i * 0.08}
+        />
+      ))}
+    </div>
+  </div>
+</section>
+
+<CTABanner heading={copy.finalHeading} cta={copy.finalCta} />

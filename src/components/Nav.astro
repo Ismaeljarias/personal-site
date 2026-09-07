@@ -1,0 +1,64 @@
+---
+import { t, localePath, switchLocalePath, type Locale } from '../i18n/content';
+import { siteConfig } from '../site.config';
+
+interface Props {
+  lang: Locale;
+  path: string;
+}
+
+const { lang, path } = Astro.props;
+const copy = t(lang);
+
+const links = [
+  { href: localePath(lang, '/'), label: copy.nav.home },
+  { href: localePath(lang, '/shopify'), label: copy.nav.shopify },
+  { href: localePath(lang, '/wordpress'), label: copy.nav.wordpress },
+  { href: localePath(lang, '/work'), label: copy.nav.work },
+  { href: localePath(lang, '/contact'), label: copy.nav.contact },
+];
+
+const altHref = switchLocalePath(path, lang === 'en' ? 'es' : 'en');
+---
+
+<header class="sticky top-0 z-50 border-b border-border/80 bg-bg/85 backdrop-blur-sm">
+  <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-4">
+    <a href={localePath(lang, '/')} class="font-semibold tracking-tight text-ink">
+      {siteConfig.name}
+    </a>
+
+    <nav class="hidden items-center gap-7 text-sm text-ink-muted md:flex">
+      {links.map((link) => (
+        <a href={link.href} class="transition-colors hover:text-ink">
+          {link.label}
+        </a>
+      ))}
+    </nav>
+
+    <div class="flex items-center gap-4">
+      <a
+        href={altHref}
+        class="text-sm text-ink-muted transition-colors hover:text-ink"
+        aria-label={`Switch language to ${copy.nav.langSwitchLabel}`}
+      >
+        {copy.nav.langSwitchLabel}
+      </a>
+      <a
+        href={siteConfig.calendlyUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hidden rounded-full bg-accent px-4 py-2 text-sm font-medium text-bg transition-opacity hover:opacity-90 sm:inline-block"
+      >
+        {copy.nav.cta}
+      </a>
+    </div>
+  </div>
+
+  <nav class="flex items-center gap-5 overflow-x-auto border-t border-border/60 px-6 py-2 text-sm text-ink-muted md:hidden">
+    {links.map((link) => (
+      <a href={link.href} class="shrink-0 transition-colors hover:text-ink">
+        {link.label}
+      </a>
+    ))}
+  </nav>
+</header>
