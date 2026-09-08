@@ -23,7 +23,7 @@ const en = {
   meta: {
     titleSuffix: 'Ismael Arias — Senior Shopify Developer',
     description:
-      'Senior Shopify Developer (ex-Amazon) building fast Shopify Plus / Hydrogen storefronts and custom WordPress sites from Mexico City.',
+      'Senior Shopify Developer (ex-Amazon) building fast Shopify Plus / Hydrogen storefronts and custom WordPress sites. Available worldwide, with full overlap with US business hours.',
   },
   nav: {
     home: 'Home',
@@ -35,7 +35,7 @@ const en = {
     langSwitchLabel: 'Español',
   },
   footer: {
-    tagline: 'Senior Shopify Developer, ex-Amazon. Based in Mexico City, working US hours.',
+    tagline: 'Senior Shopify Developer, ex-Amazon. Working worldwide, full overlap with US hours.',
     linksHeading: 'Site',
     contactHeading: 'Contact',
     rights: `© ${new Date().getFullYear()} Ismael Arias. All rights reserved.`,
@@ -101,6 +101,8 @@ const en = {
     eyebrow: 'Line A · Shopify Plus & Hydrogen',
     h1: 'Enterprise-grade engineering for Shopify Plus stores.',
     sub: 'I help D2C brands on Shopify Plus fix performance, ship Hydrogen/headless architecture, and build what Checkout Extensibility and Shopify Functions actually require — backed by 10+ years of production React/TypeScript, most recently as a Frontend Engineer II at Amazon.',
+    metaDescription:
+      'Senior Shopify Developer (ex-Amazon) for Shopify Plus stores — Hydrogen/headless storefronts, Checkout Extensibility, Shopify Functions, and Core Web Vitals performance work.',
     ctaPrimary: 'Book a call',
     app: {
       eyebrow: 'Built from scratch',
@@ -211,7 +213,7 @@ const en = {
     sub: 'The fastest way to reach me is to book a short call. I’ll ask a few questions about your store or site beforehand, so the call isn’t spent on basic discovery.',
     ctaPrimary: 'Book a call on Calendly',
     emailLabel: 'Prefer email?',
-    locationNote: 'Based in Mexico City — full overlap with US business hours.',
+    locationNote: 'Remote and available worldwide — full overlap with US business hours.',
     socialsHeading: 'Elsewhere',
   },
 } as const;
@@ -220,7 +222,7 @@ const es = {
   meta: {
     titleSuffix: 'Ismael Arias — Senior Shopify Developer',
     description:
-      'Senior Shopify Developer (ex-Amazon) construyendo tiendas Shopify Plus / Hydrogen y sitios WordPress rápidos desde Ciudad de México.',
+      'Senior Shopify Developer (ex-Amazon) construyendo tiendas Shopify Plus / Hydrogen y sitios WordPress rápidos. Disponible en cualquier parte del mundo, con el mismo horario de negocios que EE. UU.',
   },
   nav: {
     home: 'Inicio',
@@ -232,7 +234,7 @@ const es = {
     langSwitchLabel: 'English',
   },
   footer: {
-    tagline: 'Senior Shopify Developer, ex-Amazon. Con base en Ciudad de México, trabajando en horario de EE. UU.',
+    tagline: 'Senior Shopify Developer, ex-Amazon. Trabajando desde cualquier parte del mundo, con el mismo horario que EE. UU.',
     linksHeading: 'Sitio',
     contactHeading: 'Contacto',
     rights: `© ${new Date().getFullYear()} Ismael Arias. Todos los derechos reservados.`,
@@ -298,6 +300,8 @@ const es = {
     eyebrow: 'Línea A · Shopify Plus & Hydrogen',
     h1: 'Ingeniería de nivel enterprise para tiendas Shopify Plus.',
     sub: 'Ayudo a marcas D2C en Shopify Plus a resolver rendimiento, construir arquitectura Hydrogen/headless, y desarrollar lo que Checkout Extensibility y Shopify Functions realmente requieren — respaldado por 10+ años de React/TypeScript en producción, el más reciente como Frontend Engineer II en Amazon.',
+    metaDescription:
+      'Senior Shopify Developer (ex-Amazon) para tiendas Shopify Plus — tiendas Hydrogen/headless, Checkout Extensibility, Shopify Functions y trabajo de rendimiento en Core Web Vitals.',
     ctaPrimary: 'Agenda una llamada',
     app: {
       eyebrow: 'Construida desde cero',
@@ -408,7 +412,7 @@ const es = {
     sub: 'La forma más rápida de contactarme es agendando una llamada corta. Te haré algunas preguntas sobre tu tienda o sitio antes, para que la llamada no se vaya en descubrimiento básico.',
     ctaPrimary: 'Agenda una llamada en Calendly',
     emailLabel: '¿Prefieres correo?',
-    locationNote: 'Con base en Ciudad de México — con traslape completo con horario de negocios de EE. UU.',
+    locationNote: 'Remoto y disponible en cualquier parte del mundo — con el mismo horario de negocios que EE. UU.',
     socialsHeading: 'En otros lugares',
   },
 } as const;

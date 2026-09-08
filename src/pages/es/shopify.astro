@@ -5,9 +5,9 @@ import { t } from '../../i18n/content';
 import ogImage from '../../assets/og/shopify-es.png';
 
 const lang = 'es' as const;
-const meta = t(lang).meta;
+const copy = t(lang);
 ---
 
-<BaseLayout lang={lang} title={`Desarrollo Shopify Plus & Hydrogen — ${meta.titleSuffix}`} description={meta.description} image={ogImage}>
+<BaseLayout lang={lang} title={`Desarrollo Shopify Plus & Hydrogen — ${copy.meta.titleSuffix}`} description={copy.shopify.metaDescription} image={ogImage}>
   <ShopifyView lang={lang} />
 </BaseLayout>

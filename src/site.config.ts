@@ -5,5 +5,5 @@ export const siteConfig = {
   calendlyUrl: 'https://calendly.com/ismaeljarias',
   linkedin: 'https://www.linkedin.com/in/ismaeljarias/',
   github: 'https://github.com/Ismaeljarias',
-  location: 'Mexico City, Mexico',
+  location: 'Remote — Worldwide',
 } as const;
