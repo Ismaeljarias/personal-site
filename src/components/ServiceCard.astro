@@ -15,17 +15,17 @@ const { tag, title, description, bullets, href, cta, delay = 0 } = Astro.props;
 <div
   data-reveal
   data-reveal-delay={delay}
-  class="flex h-full flex-col rounded-2xl border border-border bg-bg-card p-8"
+  class="flex h-full flex-col border border-border bg-bg-card p-8"
 >
-  {tag && <p class="text-xs font-medium uppercase tracking-widest text-accent">{tag}</p>}
-  <h3 class="mt-3 text-xl font-semibold text-ink">{title}</h3>
+  {tag && <p class="text-xs font-medium uppercase tracking-widest text-brass font-mono">{tag}</p>}
+  <h3 class="mt-3 text-xl font-serif font-semibold text-ink">{title}</h3>
   <p class="mt-3 text-sm leading-relaxed text-ink-muted">{description}</p>
 
   {bullets && (
     <ul class="mt-6 space-y-2 text-sm text-ink-muted">
       {bullets.map((bullet) => (
         <li class="flex gap-2">
-          <span class="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-accent"></span>
+          <span class="mt-1.5 h-1 w-1 shrink-0 bg-brass"></span>
           <span>{bullet}</span>
         </li>
       ))}
@@ -35,7 +35,7 @@ const { tag, title, description, bullets, href, cta, delay = 0 } = Astro.props;
   {href && cta && (
     <a
       href={href}
-      class="mt-8 inline-flex items-center gap-1 text-sm font-medium text-accent transition-opacity hover:opacity-80"
+      class="mt-8 inline-flex items-center gap-1 text-sm font-medium text-accent-soft transition-opacity hover:opacity-80"
     >
       {cta} <span aria-hidden="true">→</span>
     </a>

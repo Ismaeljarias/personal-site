@@ -11,8 +11,8 @@ const copy = t(lang).contact;
 ---
 
 <section class="mx-auto max-w-3xl px-6 pb-24 pt-12 text-center sm:pt-32">
-  <p class="text-sm font-medium uppercase tracking-widest text-accent" data-reveal>{copy.eyebrow}</p>
-  <h1 class="mt-5 text-balance text-4xl font-semibold tracking-tight text-ink sm:text-5xl" data-reveal data-reveal-delay={0.08}>
+  <p class="text-sm font-medium uppercase tracking-widest text-brass font-mono" data-reveal>{copy.eyebrow}</p>
+  <h1 class="mt-5 text-balance text-4xl font-serif font-semibold tracking-tight text-ink sm:text-5xl" data-reveal data-reveal-delay={0.08}>
     {copy.h1}
   </h1>
   <p class="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-ink-muted" data-reveal data-reveal-delay={0.16}>
@@ -23,7 +23,7 @@ const copy = t(lang).contact;
     href={siteConfig.calendlyUrl}
     target="_blank"
     rel="noopener noreferrer"
-    class="mt-9 inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-medium text-bg transition-opacity hover:opacity-90"
+    class="mt-9 inline-flex items-center gap-2 rounded-[8px] bg-accent px-6 py-3 text-sm font-medium text-ink transition-opacity hover:opacity-90"
     data-reveal
     data-reveal-delay={0.24}
   >
@@ -32,7 +32,7 @@ const copy = t(lang).contact;
 
   <div class="mt-12 border-t border-border pt-10" data-reveal>
     <p class="text-sm text-ink-muted">{copy.emailLabel}</p>
-    <a href={`mailto:${siteConfig.email}`} class="mt-1 inline-block font-medium text-ink hover:text-accent">
+    <a href={`mailto:${siteConfig.email}`} class="mt-1 inline-block font-medium text-ink hover:text-accent-soft">
       {siteConfig.email}
     </a>
   </div>

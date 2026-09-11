@@ -15,8 +15,8 @@ const copy = t(lang).shopify;
 ---
 
 <section class="mx-auto max-w-5xl px-6 pb-16 pt-12 sm:pt-32">
-  <p class="text-sm font-medium uppercase tracking-widest text-accent" data-reveal>{copy.eyebrow}</p>
-  <h1 class="mt-5 max-w-3xl text-balance text-4xl font-semibold tracking-tight text-ink sm:text-5xl" data-reveal data-reveal-delay={0.08}>
+  <p class="text-sm font-medium uppercase tracking-widest text-brass font-mono" data-reveal>{copy.eyebrow}</p>
+  <h1 class="mt-5 max-w-3xl text-balance text-4xl font-serif font-semibold tracking-tight text-ink sm:text-5xl" data-reveal data-reveal-delay={0.08}>
     {copy.h1}
   </h1>
   <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-muted" data-reveal data-reveal-delay={0.16}>
@@ -26,7 +26,7 @@ const copy = t(lang).shopify;
     href={siteConfig.calendlyUrl}
     target="_blank"
     rel="noopener noreferrer"
-    class="mt-9 inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-medium text-bg transition-opacity hover:opacity-90"
+    class="mt-9 inline-flex items-center gap-2 rounded-[8px] bg-accent px-6 py-3 text-sm font-medium text-ink transition-opacity hover:opacity-90"
     data-reveal
     data-reveal-delay={0.24}
   >
@@ -40,15 +40,15 @@ const copy = t(lang).shopify;
       href={copy.app.url}
       target="_blank"
       rel="noopener noreferrer"
-      class="group flex flex-col gap-4 rounded-2xl border border-border bg-bg-card p-8 transition-colors hover:border-accent/50 sm:flex-row sm:items-center sm:justify-between"
+      class="group flex flex-col gap-4 border border-border bg-bg-card p-8 transition-colors hover:border-accent/50 sm:flex-row sm:items-center sm:justify-between"
       data-reveal
     >
       <div>
-        <p class="text-xs font-medium uppercase tracking-widest text-accent">{copy.app.eyebrow}</p>
-        <h2 class="mt-2 text-xl font-semibold text-ink">{copy.app.heading}</h2>
+        <p class="text-xs font-medium uppercase tracking-widest text-brass font-mono">{copy.app.eyebrow}</p>
+        <h2 class="mt-2 text-xl font-serif font-semibold text-ink">{copy.app.heading}</h2>
         <p class="mt-2 max-w-2xl text-sm leading-relaxed text-ink-muted">{copy.app.body}</p>
       </div>
-      <span class="inline-flex shrink-0 items-center gap-1 text-sm font-medium text-accent">
+      <span class="inline-flex shrink-0 items-center gap-1 text-sm font-medium text-accent-soft">
         {copy.app.cta} <span aria-hidden="true" class="transition-transform group-hover:translate-x-0.5">→</span>
       </span>
     </a>
@@ -57,7 +57,7 @@ const copy = t(lang).shopify;
 
 <section class="border-t border-border">
   <div class="mx-auto max-w-6xl px-6 py-12 sm:py-24">
-    <h2 class="text-2xl font-semibold tracking-tight text-ink sm:text-3xl" data-reveal>{copy.servicesHeading}</h2>
+    <h2 class="text-2xl font-serif font-semibold tracking-tight text-ink sm:text-3xl" data-reveal>{copy.servicesHeading}</h2>
     <div class="mt-10 grid gap-6 sm:grid-cols-2">
       {copy.services.map((service, i) => (
         <ServiceCard title={service.title} description={service.description} delay={i * 0.08} />
@@ -76,16 +76,16 @@ const copy = t(lang).shopify;
 
 <section id="audit" class="scroll-mt-24 border-t border-border">
   <div class="mx-auto max-w-4xl px-6 py-12 sm:py-24">
-    <div class="rounded-2xl border border-accent/30 bg-bg-card p-10 text-center sm:p-14" data-reveal>
-      <p class="text-xs font-medium uppercase tracking-widest text-accent">{copy.audit.eyebrow}</p>
-      <h2 class="mt-3 text-balance text-2xl font-semibold tracking-tight text-ink sm:text-3xl">{copy.audit.heading}</h2>
+    <div class="border border-accent/30 bg-bg-card p-10 text-center sm:p-14" data-reveal>
+      <p class="text-xs font-medium uppercase tracking-widest text-brass font-mono">{copy.audit.eyebrow}</p>
+      <h2 class="mt-3 text-balance text-2xl font-serif font-semibold tracking-tight text-ink sm:text-3xl">{copy.audit.heading}</h2>
       <p class="mx-auto mt-4 max-w-xl text-ink-muted">{copy.audit.body}</p>
-      <p class="mt-6 text-lg font-semibold text-ink">{copy.audit.price}</p>
+      <p class="mt-6 text-lg font-serif font-semibold text-ink">{copy.audit.price}</p>
       <a
         href={siteConfig.calendlyUrl}
         target="_blank"
         rel="noopener noreferrer"
-        class="mt-6 inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-medium text-bg transition-opacity hover:opacity-90"
+        class="mt-6 inline-flex items-center gap-2 rounded-[8px] bg-accent px-6 py-3 text-sm font-medium text-ink transition-opacity hover:opacity-90"
       >
         {copy.audit.cta}
       </a>

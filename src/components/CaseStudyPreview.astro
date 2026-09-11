@@ -17,19 +17,19 @@ const { title, client, role, summary, stack, href, cta, delay = 0 } = Astro.prop
   href={href}
   data-reveal
   data-reveal-delay={delay}
-  class="group flex h-full flex-col rounded-2xl border border-border bg-bg-card p-8 transition-colors hover:border-accent/50"
+  class="group flex h-full flex-col border border-border bg-bg-card p-8 transition-colors hover:border-accent/50"
 >
-  <p class="text-xs font-medium uppercase tracking-widest text-accent">{client} — {role}</p>
-  <h2 class="mt-3 text-xl font-semibold text-ink">{title}</h2>
+  <p class="text-xs font-medium uppercase tracking-widest text-brass font-mono">{client} — {role}</p>
+  <h2 class="mt-3 text-xl font-serif font-semibold text-ink">{title}</h2>
   <p class="mt-3 text-sm leading-relaxed text-ink-muted">{summary}</p>
 
   <ul class="mt-6 flex flex-wrap gap-2">
     {stack.map((item) => (
-      <li class="rounded-full border border-border px-2.5 py-1 text-xs text-ink-faint">{item}</li>
+      <li class="border border-border px-2.5 py-1 font-mono text-xs text-ink-faint">{item}</li>
     ))}
   </ul>
 
-  <span class="mt-8 inline-flex items-center gap-1 text-sm font-medium text-accent">
+  <span class="mt-8 inline-flex items-center gap-1 text-sm font-medium text-accent-soft">
     {cta} <span aria-hidden="true" class="transition-transform group-hover:translate-x-0.5">→</span>
   </span>
 </a>

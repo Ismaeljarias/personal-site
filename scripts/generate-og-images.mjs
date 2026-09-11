@@ -10,11 +10,12 @@ const WIDTH = 1200;
 const HEIGHT = 630;
 
 const COLORS = {
-  bg: '#08090b',
-  border: '#1e222a',
-  ink: '#e9ebef',
-  inkMuted: '#9aa1ad',
-  accent: '#2dd4bf',
+  bg: '#0b0a09',
+  border: '#262019',
+  ink: '#efe7d8',
+  inkMuted: '#a89f8f',
+  accent: '#7c1626',
+  brass: '#b8935a',
 };
 
 function escapeXml(str) {
@@ -44,7 +45,7 @@ function wrapText(text, maxCharsPerLine, maxLines) {
 }
 
 function buildSvg({ eyebrow, title }) {
-  const titleLines = wrapText(title, 30, 3);
+  const titleLines = wrapText(title, 26, 3);
   const titleFontSize = 56;
   const lineHeight = 68;
   const titleStartY = 315 - ((titleLines.length - 1) * lineHeight) / 2;
@@ -61,13 +62,13 @@ function buildSvg({ eyebrow, title }) {
   <rect width="100%" height="100%" fill="${COLORS.bg}"/>
   <rect x="1" y="1" width="${WIDTH - 2}" height="${HEIGHT - 2}" fill="none" stroke="${COLORS.border}" stroke-width="2"/>
 
-  <rect x="80" y="80" width="40" height="6" fill="${COLORS.accent}"/>
-  <text x="80" y="65" font-family="Inter, sans-serif" font-weight="600" font-size="22" letter-spacing="0.5" fill="${COLORS.inkMuted}">${escapeXml(eyebrow)}</text>
+  <rect x="80" y="80" width="40" height="3" fill="${COLORS.brass}"/>
+  <text x="80" y="65" font-family="'Courier New', monospace" font-weight="700" font-size="20" letter-spacing="1" fill="${COLORS.brass}">${escapeXml(eyebrow.toUpperCase())}</text>
 
-  <text font-family="Inter, sans-serif" font-weight="700" font-size="${titleFontSize}" fill="${COLORS.ink}">${titleTspans}</text>
+  <text font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="${titleFontSize}" fill="${COLORS.ink}">${titleTspans}</text>
 
-  <text x="80" y="560" font-family="Inter, sans-serif" font-weight="700" font-size="26" fill="${COLORS.ink}">Ismael Arias</text>
-  <text x="1120" y="560" font-family="Inter, sans-serif" font-size="20" fill="${COLORS.accent}" text-anchor="end">ismaeljarias.com</text>
+  <text x="80" y="560" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="26" fill="${COLORS.ink}">Ismael Arias</text>
+  <text x="1120" y="560" font-family="'Courier New', monospace" font-size="18" fill="${COLORS.inkMuted}" text-anchor="end">ismaeljarias.com</text>
 </svg>
 `;
 }

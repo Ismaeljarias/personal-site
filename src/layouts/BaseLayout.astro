@@ -1,5 +1,6 @@
 ---
 import '@fontsource-variable/inter';
+import '@fontsource-variable/newsreader';
 import '../styles/global.css';
 import { getImage } from 'astro:assets';
 import Nav from '../components/Nav.astro';
@@ -57,7 +58,7 @@ const ogImageUrl = new URL(optimizedOgImage.src, Astro.site).toString();
 
     <link rel="icon" href="/favicon.png" type="image/png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <meta name="theme-color" content="#08090b" />
+    <meta name="theme-color" content="#0b0a09" />
     <slot name="head" />
   </head>
   <body class="min-h-screen bg-bg text-ink antialiased">

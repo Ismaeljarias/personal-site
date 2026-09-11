@@ -15,12 +15,12 @@ const { heading, steps } = Astro.props;
 
 <section class="border-t border-border">
   <div class="mx-auto max-w-6xl px-6 py-12 sm:py-24">
-    <h2 class="text-2xl font-semibold tracking-tight text-ink sm:text-3xl" data-reveal>{heading}</h2>
+    <h2 class="text-2xl font-serif font-semibold tracking-tight text-ink sm:text-3xl" data-reveal>{heading}</h2>
     <div class="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
       {steps.map((step, i) => (
         <div data-reveal data-reveal-delay={i * 0.08}>
-          <p class="font-mono text-sm text-accent">{step.step}</p>
-          <h3 class="mt-2 font-semibold text-ink">{step.title}</h3>
+          <p class="font-mono text-sm text-brass">{step.step}</p>
+          <h3 class="mt-2 font-serif font-semibold text-ink">{step.title}</h3>
           <p class="mt-2 text-sm leading-relaxed text-ink-muted">{step.body}</p>
         </div>
       ))}

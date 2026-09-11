@@ -23,7 +23,7 @@ const en = {
   meta: {
     titleSuffix: 'Ismael Arias — Senior Shopify Developer',
     description:
-      'Senior Shopify Developer (ex-Amazon) building fast Shopify Plus / Hydrogen storefronts and custom WordPress sites. Available worldwide, with full overlap with US business hours.',
+      'Senior Shopify Developer at CQL, a Shopify Platinum Partner agency (ex-Amazon), building fast Shopify Plus / Hydrogen storefronts and custom WordPress sites. Available worldwide, with full overlap with US business hours.',
   },
   nav: {
     home: 'Home',
@@ -35,15 +35,15 @@ const en = {
     langSwitchLabel: 'Español',
   },
   footer: {
-    tagline: 'Senior Shopify Developer, ex-Amazon. Working worldwide, full overlap with US hours.',
+    tagline: 'Senior Shopify Developer at CQL, ex-Amazon. Working worldwide, full overlap with US hours.',
     linksHeading: 'Site',
     contactHeading: 'Contact',
     rights: `© ${new Date().getFullYear()} Ismael Arias. All rights reserved.`,
   },
   home: {
-    eyebrow: 'Senior Shopify Developer · Ex-Amazon · Shopify App Store Developer',
+    eyebrow: 'Senior Shopify Developer · CQL · Ex-Amazon',
     h1: 'Shopify and WordPress sites that load fast, convert, and don’t break at scale.',
-    sub: 'I design, build, and fix Shopify Plus / Hydrogen storefronts and fast WordPress sites for teams tired of guessing why performance and conversion stall. 10+ years shipping production frontend, most recently as a Frontend Engineer II at Amazon.',
+    sub: 'I design, build, and fix Shopify Plus / Hydrogen storefronts and fast WordPress sites for teams tired of guessing why performance and conversion stall. 10+ years shipping production frontend, currently as a Senior Shopify Developer at CQL — a Shopify Platinum Partner agency — and previously a Frontend Engineer II at Amazon.',
     appNote: 'I also design and ship my own Shopify app, live on the Shopify App Store.',
     ctaPrimary: 'Book a call',
     ctaSecondary: 'See the Performance Audit',
@@ -100,9 +100,9 @@ const en = {
   shopify: {
     eyebrow: 'Line A · Shopify Plus & Hydrogen',
     h1: 'Enterprise-grade engineering for Shopify Plus stores.',
-    sub: 'I help D2C brands on Shopify Plus fix performance, ship Hydrogen/headless architecture, and build what Checkout Extensibility and Shopify Functions actually require — backed by 10+ years of production React/TypeScript, most recently as a Frontend Engineer II at Amazon.',
+    sub: 'I help D2C brands on Shopify Plus fix performance, ship Hydrogen/headless architecture, and build what Checkout Extensibility and Shopify Functions actually require — backed by 10+ years of production React/TypeScript, currently at CQL, a Shopify Platinum Partner agency, and previously a Frontend Engineer II at Amazon.',
     metaDescription:
-      'Senior Shopify Developer (ex-Amazon) for Shopify Plus stores — Hydrogen/headless storefronts, Checkout Extensibility, Shopify Functions, and Core Web Vitals performance work.',
+      'Senior Shopify Developer at CQL, a Shopify Platinum Partner agency (ex-Amazon), for Shopify Plus stores — Hydrogen/headless storefronts, Checkout Extensibility, Shopify Functions, and Core Web Vitals performance work.',
     ctaPrimary: 'Book a call',
     app: {
       eyebrow: 'Built from scratch',
@@ -202,7 +202,7 @@ const en = {
   work: {
     eyebrow: 'Selected work',
     h1: 'A few problems I’ve actually solved.',
-    sub: 'Real engineering work from my time at Amazon and Kritik, plus a Shopify app I designed and shipped solo — described plainly: the problem, what I did, and what changed.',
+    sub: 'Real engineering work from my time at CQL, Amazon, and Kritik, plus a Shopify app I designed and shipped solo — described plainly: the problem, what I did, and what changed.',
     cardCta: 'Read the case study',
     finalHeading: 'Want engineering like this on your store or site?',
     finalCta: 'Book a call',
@@ -222,7 +222,7 @@ const es = {
   meta: {
     titleSuffix: 'Ismael Arias — Senior Shopify Developer',
     description:
-      'Senior Shopify Developer (ex-Amazon) construyendo tiendas Shopify Plus / Hydrogen y sitios WordPress rápidos. Disponible en cualquier parte del mundo, con el mismo horario de negocios que EE. UU.',
+      'Senior Shopify Developer en CQL, una agencia Shopify Platinum Partner (ex-Amazon), construyendo tiendas Shopify Plus / Hydrogen y sitios WordPress rápidos. Disponible en cualquier parte del mundo, con el mismo horario de negocios que EE. UU.',
   },
   nav: {
     home: 'Inicio',
@@ -234,15 +234,15 @@ const es = {
     langSwitchLabel: 'English',
   },
   footer: {
-    tagline: 'Senior Shopify Developer, ex-Amazon. Trabajando desde cualquier parte del mundo, con el mismo horario que EE. UU.',
+    tagline: 'Senior Shopify Developer en CQL, ex-Amazon. Trabajando desde cualquier parte del mundo, con el mismo horario que EE. UU.',
     linksHeading: 'Sitio',
     contactHeading: 'Contacto',
     rights: `© ${new Date().getFullYear()} Ismael Arias. Todos los derechos reservados.`,
   },
   home: {
-    eyebrow: 'Senior Shopify Developer · Ex-Amazon · Shopify App Store Developer',
+    eyebrow: 'Senior Shopify Developer · CQL · Ex-Amazon',
     h1: 'Tiendas Shopify y sitios WordPress que cargan rápido, convierten y no se rompen al crecer.',
-    sub: 'Diseño, construyo y arreglo tiendas Shopify Plus / Hydrogen y sitios WordPress rápidos para equipos cansados de adivinar por qué el rendimiento y la conversión no avanzan. 10+ años construyendo frontend en producción, más recientemente como Frontend Engineer II en Amazon.',
+    sub: 'Diseño, construyo y arreglo tiendas Shopify Plus / Hydrogen y sitios WordPress rápidos para equipos cansados de adivinar por qué el rendimiento y la conversión no avanzan. 10+ años construyendo frontend en producción, actualmente como Senior Shopify Developer en CQL — una agencia Shopify Platinum Partner — y antes Frontend Engineer II en Amazon.',
     appNote: 'También diseño y publico mi propia app de Shopify, disponible en el Shopify App Store.',
     ctaPrimary: 'Agenda una llamada',
     ctaSecondary: 'Ver el Performance Audit',
@@ -299,9 +299,9 @@ const es = {
   shopify: {
     eyebrow: 'Línea A · Shopify Plus & Hydrogen',
     h1: 'Ingeniería de nivel enterprise para tiendas Shopify Plus.',
-    sub: 'Ayudo a marcas D2C en Shopify Plus a resolver rendimiento, construir arquitectura Hydrogen/headless, y desarrollar lo que Checkout Extensibility y Shopify Functions realmente requieren — respaldado por 10+ años de React/TypeScript en producción, el más reciente como Frontend Engineer II en Amazon.',
+    sub: 'Ayudo a marcas D2C en Shopify Plus a resolver rendimiento, construir arquitectura Hydrogen/headless, y desarrollar lo que Checkout Extensibility y Shopify Functions realmente requieren — respaldado por 10+ años de React/TypeScript en producción, actualmente en CQL, una agencia Shopify Platinum Partner, y antes Frontend Engineer II en Amazon.',
     metaDescription:
-      'Senior Shopify Developer (ex-Amazon) para tiendas Shopify Plus — tiendas Hydrogen/headless, Checkout Extensibility, Shopify Functions y trabajo de rendimiento en Core Web Vitals.',
+      'Senior Shopify Developer en CQL, una agencia Shopify Platinum Partner (ex-Amazon), para tiendas Shopify Plus — tiendas Hydrogen/headless, Checkout Extensibility, Shopify Functions y trabajo de rendimiento en Core Web Vitals.',
     ctaPrimary: 'Agenda una llamada',
     app: {
       eyebrow: 'Construida desde cero',
@@ -401,7 +401,7 @@ const es = {
   work: {
     eyebrow: 'Trabajo seleccionado',
     h1: 'Algunos problemas que ya resolví.',
-    sub: 'Trabajo de ingeniería real de mi paso por Amazon y Kritik, más una app de Shopify que diseñé y publiqué en solitario — descrito en términos simples: el problema, qué hice, y qué cambió.',
+    sub: 'Trabajo de ingeniería real de mi paso por CQL, Amazon y Kritik, más una app de Shopify que diseñé y publiqué en solitario — descrito en términos simples: el problema, qué hice, y qué cambió.',
     cardCta: 'Ver el caso completo',
     finalHeading: '¿Quieres ingeniería así en tu tienda o sitio?',
     finalCta: 'Agenda una llamada',

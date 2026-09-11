@@ -1,17 +1,20 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: #08090b;
-  --color-bg-soft: #101319;
-  --color-bg-card: #12151b;
-  --color-ink: #e9ebef;
-  --color-ink-muted: #9aa1ad;
-  --color-ink-faint: #7a8290;
-  --color-accent: #2dd4bf;
-  --color-accent-soft: #99f6ec;
-  --color-border: #1e222a;
+  --color-bg: #0b0a09;
+  --color-bg-soft: #100e0d;
+  --color-bg-card: #141210;
+  --color-ink: #efe7d8;
+  --color-ink-muted: #a89f8f;
+  --color-ink-faint: #8f8678;
+  --color-accent: #7c1626;
+  --color-accent-soft: #cf6b76;
+  --color-brass: #b8935a;
+  --color-border: #262019;
 
   --font-sans: "InterVariable", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-serif: "Newsreader Variable", Georgia, "Times New Roman", serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 
   --animate-fade-up: fade-up 0.6s ease-out both;
 
@@ -46,7 +49,7 @@ body {
 
 ::selection {
   background-color: var(--color-accent);
-  color: var(--color-bg);
+  color: var(--color-ink);
 }
 
 [data-reveal] {
@@ -92,9 +95,9 @@ body {
 }
 
 .case-prose code {
-  border-radius: 0.25rem;
   background-color: var(--color-bg-soft);
   padding: 0.125rem 0.375rem;
   font-size: 0.85em;
-  color: var(--color-accent-soft);
+  font-family: var(--font-mono);
+  color: var(--color-brass);
 }
