@@ -1,0 +1,46 @@
+---
+type IconType = 'diagnose' | 'propose' | 'build' | 'measure';
+
+interface Props {
+  type: IconType;
+}
+
+const { type } = Astro.props;
+---
+
+<span class="mb-3 inline-flex" aria-hidden="true">
+  {type === 'diagnose' && (
+    <svg width="28" height="28" viewBox="0 0 32 32" fill="none" stroke="var(--color-brass)" stroke-width="1.5" stroke-linecap="round">
+      <circle cx="13" cy="13" r="8" pathLength="1" class="draw" />
+      <line x1="19" y1="19" x2="27" y2="27" pathLength="1" class="draw" />
+    </svg>
+  )}
+  {type === 'propose' && (
+    <svg width="28" height="28" viewBox="0 0 32 32" fill="none" stroke="var(--color-brass)" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round">
+      <circle cx="16" cy="14" r="9" pathLength="1" class="draw" />
+      <path
+        d="M16 8 L17.47 11.98 L21.71 12.15 L18.38 14.77 L19.53 18.85 L16 16.5 L12.47 18.85 L13.62 14.77 L10.29 12.15 L14.53 11.98 Z"
+        pathLength="1"
+        class="draw"
+      />
+    </svg>
+  )}
+  {type === 'build' && (
+    <svg width="28" height="28" viewBox="0 0 32 32" fill="none" stroke="var(--color-brass)" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round">
+      <circle cx="16" cy="6.5" r="1.8" pathLength="1" class="draw" />
+      <path d="M16 8.3 L10 25" pathLength="1" class="draw" />
+      <path d="M16 8.3 L22 25" pathLength="1" class="draw" />
+      <circle cx="10" cy="25" r="1" pathLength="1" class="draw" />
+      <circle cx="22" cy="25" r="1" pathLength="1" class="draw" />
+    </svg>
+  )}
+  {type === 'measure' && (
+    <svg width="28" height="28" viewBox="0 0 32 32" fill="none" stroke="var(--color-brass)" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M13 5 L19 5" pathLength="1" class="draw" />
+      <line x1="16" y1="5" x2="16" y2="8" pathLength="1" class="draw" />
+      <circle cx="16" cy="19" r="10" pathLength="1" class="draw" />
+      <line x1="16" y1="19" x2="16" y2="12.5" pathLength="1" class="draw" />
+      <line x1="16" y1="19" x2="20" y2="21.5" pathLength="1" class="draw" />
+    </svg>
+  )}
+</span>

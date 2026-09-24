@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import proofImage from '../assets/proof-pagespeed.png';
 import { pagespeed } from '../data/pagespeed';
+import PrecisionGauge from './PrecisionGauge.astro';
 
 interface Props {
   eyebrow: string;
@@ -24,8 +25,13 @@ const metrics = [
 <section class="border-t border-border">
   <div class="mx-auto max-w-4xl px-6 py-12 sm:py-24">
     <div class="border border-border bg-bg-card p-8 sm:p-10" data-reveal>
-      <p class="text-xs font-medium uppercase tracking-widest text-brass font-mono">{eyebrow}</p>
-      <h2 class="mt-3 text-balance text-2xl font-serif font-semibold tracking-tight text-ink sm:text-3xl">{heading}</h2>
+      <div class="flex flex-col items-start gap-8 sm:flex-row sm:items-center sm:justify-between">
+        <div>
+          <p class="text-xs font-medium uppercase tracking-widest text-brass font-mono">{eyebrow}</p>
+          <h2 class="mt-3 text-balance text-2xl font-serif font-semibold tracking-tight text-ink sm:text-3xl">{heading}</h2>
+        </div>
+        <PrecisionGauge value={pagespeed.performance} label="score" />
+      </div>
 
       <Image
         src={proofImage}

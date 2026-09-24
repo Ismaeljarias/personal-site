@@ -1,4 +1,6 @@
 ---
+import ProcessIcon from './ProcessIcon.astro';
+
 interface Step {
   step: string;
   title: string;
@@ -11,6 +13,7 @@ interface Props {
 }
 
 const { heading, steps } = Astro.props;
+const iconTypes = ['diagnose', 'propose', 'build', 'measure'] as const;
 ---
 
 <section class="border-t border-border">
@@ -19,6 +22,7 @@ const { heading, steps } = Astro.props;
     <div class="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
       {steps.map((step, i) => (
         <div data-reveal data-reveal-delay={i * 0.08}>
+          <ProcessIcon type={iconTypes[i]} />
           <p class="font-mono text-sm text-brass">{step.step}</p>
           <h3 class="mt-2 font-serif font-semibold text-ink">{step.title}</h3>
           <p class="mt-2 text-sm leading-relaxed text-ink-muted">{step.body}</p>
